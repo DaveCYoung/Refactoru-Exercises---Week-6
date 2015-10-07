@@ -1,0 +1,18 @@
+What happens when you put http://google.com into your browser?  
+
+	HTTP - Protocol/Format for requests/responses
+
+	Request goes to whatever server we are sending the address to.  
+
+	IP address - indicates physical address of server.  
+
+	DNS - domain name server - translates web addresses to IP addresses, sends back IP address 
+	
+	Request goes to google's server - goes to port 80 by default
+		- server at google will read request
+		- push back appropriate content based on request 
+		- sends back error if invalid request 
+		- includes links to external resources (ie images, stylesheets, js, etc)
+		- all external resrouces that are linked prompt additional requests from the server
+
+	

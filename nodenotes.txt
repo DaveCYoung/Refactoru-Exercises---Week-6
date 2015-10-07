@@ -1,0 +1,58 @@
+What is node?
+	A javascript runtime envrionment 
+	Client Side vs Server Side Javascript
+
+How is node.js different from browser JS?
+
+	No window object.
+	No DOM 
+
+	Modules - define what code needs to be shared between files.
+	File system access - can do anything on your computer that you would do on your computer. 
+	Networking access - can send/recieve requests 
+	Hardware access 
+
+	= Web Server 
+
+Running script at command line much like calling function.  scripts can have arguments!
+
+access command-line arguments with process.argv (arguments vector)
+
+vector = list of values - essentially an array of arguments passed to script.  
+
+process.argv[0] = node.  process.argv[1] = script that is being run.  process.argv[2 +] = arguments 
+
+use module.exports and require() to share code between files.  whatever is exported in one file can be required in another.
+
+require returns the value of module.exports.  
+-=-=-=-=-=-=-=-=-
+
+FS module - file system access 
+
+fs is a core module so you can require it by name.  you don't need to specify file path. 
+
+node copy.js source.txt destination.txt
+
+_+_+_+_+_+_+_+_+_+_+_
+
+
+NPM - Node Package Manager ....  or nothing at all.
+
+npm init - initializes object
+
+when requiring installed modues, you don't need to use a filepath.  node expects to look for modules in your node_modules folder.  
+
+the flag --save causes NPM to record info about the package in package.JSON 
+
+npm install 'packagename' --save
+
+typing npm install with no other arguments will read the package.json file and download all the modules that are specified dependencies 
+
+don't push node modules to github.  
+
+all files and folders in .gitignor file will not be added or committed to git.  this is a great way to not share large node modules or secret API keys. 
+
+semantic versioning - a.b.c - major.minor.patch or fail.feature.fix.  
+	patch/fix = small bug fix, doesn't change how it's used.
+	feature/minor = integrates new feature or functionality.  old code should still work. 
+	major/fail = major overhaul, changes will break old code.  

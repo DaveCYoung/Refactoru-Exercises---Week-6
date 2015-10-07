@@ -1,0 +1,32 @@
+What is node?
+	A javascript runtime envrionment 
+	Client Side vs Server Side Javascript
+
+How is node.js different from browser JS?
+
+	No window object.
+	No DOM 
+
+	Modules - define what code needs to be shared between files.
+	File system access - can do anything on your computer that you would do on your computer. 
+	Networking access - can send/recieve requests 
+	Hardware access 
+
+	= Web Server 
+
+Running script at command line much like calling function.  scripts can have arguments!
+
+access command-line arguments with process.argv (arguments vector)
+
+vector = list of values - essentially an array of arguments passed to script.  
+
+process.argv[0] = node.  process.argv[1] = script that is being run.  process.argv[2 +] = arguments 
+
+use module.exports and require() to share code between files.  whatever is exported in one file can be required in another.
+
+require returns the value of module.exports.  
+-=-=-=-=-=-=-=-=-
+
+FS module - file system access 
+
+fs is a core module so you can require it by name.  you don't need to specify file path. 
